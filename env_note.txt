@@ -1,0 +1,8 @@
+By default, line 1 of the file:
+    usr/lib/python3.7/site-packages/pandas_datareader/fred.py
+reads:
+    from pandas.core.common import is_list_like
+
+This raised an ImportError when I tried to import pandas_datareader. To fix, I
+changed the first line of the above file to:
+    from pandas.api.types import is_list_like
